@@ -41,24 +41,23 @@
             <img src="../assets/upper_red_design.svg" alt="">
         </div>
         <div class="userdetails">
-            <div>
-                <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">Login:</h1>
-            </div>            
-            <section id="whenSignedOut">
-                <button id="signInBtn" class="btn btn-primary"><i class="fab fa-google"></i></button>
-            </section>
-            
-            <section id="whenSignedIn" hidden="true">
+            <div id="whenSignedOut">
+                <div>
+                    <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex;justify-content: center;">
+                        Login:
+                    </h1>
+                </div>
+                    <button  style=" display:flex; justify-content:center;" id="signInBtn"><img style="height: 50px;width: 50px;" src="../assets/Google__G__Logo.svg" alt=""></button>
+            </div>
+            <div id="whenSignedIn" hidden="true">
                 <div id="userDetails"></div>
                 <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
-            </section>
-
+            </div>
+        </div>
             <div class="footer" >
                 <img src="../assets/lower_red_design.svg" alt="">
             </div>
-        </div> 
-
-    </div>
+    </div> 
 </body>
 
 </html>
