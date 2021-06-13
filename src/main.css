@@ -1,0 +1,62 @@
+.hamburger_main{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5%;
+}
+
+.circle{
+    margin-top: 5%;
+    cursor: pointer;
+    background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%);
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    transition: all 0.5s ;
+    user-select: none;
+    font-size: larger;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+}
+
+/* .circle:active{
+    transform: scale();
+} */
+
+.timeshowerbox{
+    margin-top: 10%;
+    background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%);
+    padding: 2%;
+    border-radius: 5px;
+    user-select: none;
+    width: 25%;
+    text-align: center;
+    box-shadow: 2px 2px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.animator_main{
+    margin-top: 15%;
+    background: grey;
+    border: black 2px;
+    height: 350px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height:     100%;
+    min-height: 100%;
+    margin:     0px auto;
+    padding:    0px auto;
+}
