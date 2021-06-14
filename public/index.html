@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Time</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-        
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-                 https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-        
-        <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            var firebaseConfig = {
-                apiKey: "AIzaSyDX2t2QoMPUD38CngIjl0tRhec7y7tqglQ",
-                authDomain: "forward-455dc.firebaseapp.com",
-                projectId: "forward-455dc",
-                storageBucket: "forward-455dc.appspot.com",
-                messagingSenderId: "215850117573",
-                appId: "1:215850117573:web:74c2f032479900ab0303ac",
-                measurementId: "G-K4QH2PKGT7"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-        </script>
-        <script src="app.js" defer></script>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>  
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+              https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+     <script>
+         // Your web app's Firebase configuration
+         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+         var firebaseConfig = {
+             apiKey: "AIzaSyDX2t2QoMPUD38CngIjl0tRhec7y7tqglQ",
+             authDomain: "forward-455dc.firebaseapp.com",
+             projectId: "forward-455dc",
+             storageBucket: "forward-455dc.appspot.com",
+             messagingSenderId: "215850117573",
+             appId: "1:215850117573:web:74c2f032479900ab0303ac",
+             measurementId: "G-K4QH2PKGT7"
+         };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+     </script>
 </head>
 
 <body>
@@ -42,24 +37,15 @@
         <div class="header">
             <img src="./assets/upper_red_design.svg" alt="">
         </div>
-        <div class="userdetails">
-            <div id="whenSignedOut">
-                <div>
-                    <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex;justify-content: center;">
-                        Login:
-                    </h1>
-                </div>
-                    <button  style=" display:flex; justify-content:center;" id="signInBtn"><img style="height: 50px;width: 50px;" src="../assets/Google__G__Logo.svg" alt=""></button>
+        <a href="./login.html">
+            <div class="arrow box">
+                <img class="button" src="./assets/entryarrow.svg" alt="">
             </div>
-            <div id="whenSignedIn" hidden="true">
-                <div id="userDetails"></div>
-                <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
-            </div>
+        </a>
+        <div class="footer">
+            <img src="./assets/lower_red_design.svg" alt="">
         </div>
-            <div class="footer" >
-                <img src="../assets/lower_red_design.svg" alt="">
-            </div>
-    </div> 
+    </div>
 </body>
 
 </html>
