@@ -1,6 +1,6 @@
 ///// User Authentication /////
 
-/*
+
 const auth = firebase.auth();
 
 const whenSignedIn = document.getElementById('whenSignedIn');
@@ -34,7 +34,7 @@ auth.onAuthStateChanged(user => {
     }
 });
 
-
+/*
 
 ///// Firestore /////
 
