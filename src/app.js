@@ -1,10 +1,6 @@
 ///// User Authentication /////
 
-// import * as firebase from 'firebase'
-
-// console.log(firebase.auth) // Undefined
-// console.log(firebase.default.auth) // Function
-
+/*
 const auth = firebase.auth();
 
 const whenSignedIn = document.getElementById('whenSignedIn');
@@ -95,4 +91,5 @@ auth.onAuthStateChanged(user => {
         unsubscribe && unsubscribe();
     }
 });
-
+*/
+console.log(firebase);
