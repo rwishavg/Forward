@@ -11,7 +11,6 @@ const signOutBtn = document.getElementById('signOutBtn');
 
 const userDetails = document.getElementById('userDetails');
 
-
 const provider = new firebase.auth.GoogleAuthProvider();
 
 /// Sign in event handlers
@@ -25,7 +24,10 @@ auth.onAuthStateChanged(user => {
         // signed in
         whenSignedIn.hidden = false;
         whenSignedOut.hidden = true;
-        userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> <p>User ID: ${user.uid}</p>`;
+        userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3>`;
+        //  <p>User ID: ${user.uid}</p>
+        location.href = './main.html';
+        // window.location.replace("./main.html");
     } else {
         // not signed in
         whenSignedIn.hidden = true;
