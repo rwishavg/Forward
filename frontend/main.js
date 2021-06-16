@@ -4,8 +4,9 @@ const animator = document.querySelector(".animator_main")
 
 circle.addEventListener("click", () => { circle.innerHTML = "STOP" ; 
     if(count === 0){
-        circle.style.background = "linear-gradient(90deg,#D1A7A7,#FFBCB8)"
-        circle.style.color = "white"
+        circle.style.background = "linear-gradient(180deg, #fbfdf9 0%, rgba(247, 214, 214, 0.918) 100%),linear-gradient(180deg, rgba(153, 95, 95, 0) 63.69%, #d5daf8 99.99%)"
+        // circle.style.background = "linear-gradient(90deg,#D1A7A7,#FFBCB8)"
+        circle.style.color = "black"
         circle.style.borderRadius = "10px"
         setTime()
         // setAnimator(count)
@@ -47,7 +48,6 @@ const setTime = () => {
         document.querySelector(".timeshowerbox").innerHTML = `${hr}:${min}:${sec}`
     }, 1000);
 }
-
 
 
 // data will be exported at the end of the day
