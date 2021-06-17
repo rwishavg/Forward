@@ -14,54 +14,71 @@ body, html {
     padding:    0px auto;
 }
 
+img{
+    width: 40px;
+}
+
 .circle{
-    position: relative;
     cursor: pointer;
-    background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%);
-    /* background: linear-gradient(180deg, #fbfdf9 0%, rgba(247, 214, 214, 0.918) 100%),linear-gradient(180deg, rgba(153, 95, 95, 0) 63.69%, #d5daf8 99.99%); */
-    height: 200px;
-    width: 200px;
+    background: linear-gradient(#d6e4eeda,#ffffff8f,#e6f0de96);
+    height: 175px;
+    width: 175px;
     border-radius: 100%;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     user-select: none;
     font-size: x-large;
-    left: 50%;
-    transform: translateX(-50%);
     border: none;
-    transition: transform 0.8s ease-in-out;
-    margin-top: 5%;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
 .circle:focus{
     outline: none;
 }
-.circle:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2); 
-}
 
 .circle:active{
-    transform: translateX(-50%) scale(0.95);
+    transform: scale(0.95);
 }
 
 .timeshowerbox{
-    margin-top: 20%;
-    background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%);
+    background: linear-gradient(#d6e4eeda,#ffffff8f,#e6f0de96);
     margin: 10%;
     border-radius: 5px;
     user-select: none;
-    width: 35%;
+    min-width: 150px;
+    width: fit-content;
     height: 40px;
     text-align: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
     font-size: large;
     display: flex;
-    justify-content: center;
-    margin-left: 50%;
-    transform: translateX(-50%);
     align-items: center;
     font-size: x-large;
     padding: 40px;
+}
+
+.start-and-timer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-left-circle, .div-right-timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.div-left-circle{
+    margin-right: 25%;
+    justify-content: flex-end;
+}
+
+.div-right-timer{
+    justify-content: flex-start;
 }
 
 .animator_main{
@@ -81,17 +98,56 @@ body, html {
     margin: 15px;
     padding: 5px;
     border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;;
+    user-select: none;
+}
+
+.dropdown-item{
+    background-color: #ffffff;
+    margin: 8px auto;
+    padding: .25rem 0.8rem;
+    border-radius: 5px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .t{
-    user-select: none;
+    background: transparent;
     border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;;
+    user-select: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 20%;
+}
+
+.t:focus{
+    outline: none;
+}
+
+.dropdown-menu-right{
+    background-color: #CACACA;
+    position: relative;
 }
 
 .color{
     color: grey !important;
+}
+
+#backarrow{
+    display: none;
+}
+
+@media (max-width: 1050px)
+{
+    .start-and-timer{
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .div-left-circle, .div-right-timer{
+        margin: 10px auto;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 320px)

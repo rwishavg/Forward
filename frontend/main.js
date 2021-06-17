@@ -1,27 +1,42 @@
 const circle = document.querySelector(".circle")
-let count = 0,interval
-const animator = document.querySelector(".animator_main") 
+let count = 0, interval
+const animator = document.querySelector(".animator_main")
+const menu = document.getElementById("hamburger")
+const backarrow = document.getElementById("backarrow")
 
-circle.addEventListener("click", () => { circle.innerHTML = "STOP" ; 
-    if(count === 0){
-        circle.style.background = "linear-gradient(180deg, #fbfdf9 0%, rgba(247, 214, 214, 0.918) 100%),linear-gradient(180deg, rgba(153, 95, 95, 0) 63.69%, #d5daf8 99.99%)"
-        // circle.style.background = "linear-gradient(90deg,#D1A7A7,#FFBCB8)"
+circle.addEventListener("click", () => {
+    circle.innerHTML = "STOP";
+    if (count === 0) {
         circle.style.color = "black"
-        circle.style.borderRadius = "10px"
+        circle.style.borderRadius = "15px"
         setTime()
         // setAnimator(count)
         count = 1
-    }   
-    else{
+    }
+    else {
         circle.style.borderRadius = "50%"
         circle.style.color = "black"
-        circle.style.background = "linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%)"
-        circle.innerHTML="START"
+        circle.innerHTML = "START"
         clearInterval(interval)
         count = 0
-    }})
+    }
+})
 
 let hr = 0, min = 0, sec = 0
+
+menu.addEventListener("click", () => {
+    menu.style.display = "none";
+    backarrow.style.display = "block"
+}
+)
+
+backarrow.addEventListener("click", () => {
+    backarrow.style.display = "none";
+    menu.style.display = "block"
+}
+)
+
+
 
 // const setAnimator = (count) => {
 //     if(count === 0){
