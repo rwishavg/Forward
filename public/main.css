@@ -17,8 +17,7 @@ body, html {
 .circle{
     position: relative;
     cursor: pointer;
-    background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%);
-    /* background: linear-gradient(180deg, #fbfdf9 0%, rgba(247, 214, 214, 0.918) 100%),linear-gradient(180deg, rgba(153, 95, 95, 0) 63.69%, #d5daf8 99.99%); */
+    background: linear-gradient(180deg, #effff4 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #d1e2e9 99.99%);
     height: 200px;
     width: 200px;
     border-radius: 100%;
@@ -46,7 +45,8 @@ body, html {
 
 .timeshowerbox{
     margin-top: 20%;
-    background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%);
+    /* background: linear-gradient(180deg, #F0F8EA 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #C3C9EC 99.99%); */
+    background: linear-gradient(180deg, #effff4 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #d1e2e9 99.99%);
     margin: 10%;
     border-radius: 5px;
     user-select: none;
@@ -61,7 +61,7 @@ body, html {
     transform: translateX(-50%);
     align-items: center;
     font-size: x-large;
-    padding: 40px;
+    padding: 20px;
 }
 
 .animator_main{
