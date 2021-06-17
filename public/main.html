@@ -50,12 +50,14 @@
                 <div class="dropdown-menu dropdown-menu-right">
                   <a class="dropdown-item" href="./history.html">History</a>
                   <a class="dropdown-item" href="./dev.html">Developers</a>
-                  <a class="dropdown-item"><button id="signOutBtn" class="dropdown-item" onclick="LogOut()">Log Out</button></a>
+                  <a class="dropdown-item" onclick="LogOut()">Log Out</a>
                 </div>
               </div>
         </div>
-        <div>
+        <div class="name">
+            <div>Hi&nbsp</div>
             <div id="name"></div>
+            <div>👋</div>
         </div>
         <div>
             <button class="circle">
@@ -70,13 +72,16 @@
         </div>
 
         <div>
-            <div class="animator_main">Hello</div>
+            <div class="animator_main">
+                <img src="./assets/Barren-Tree-Silhouette-2.svg" class="image-animator" alt="">
+            </div>
         </div>
     </div>
 </body>
 <script>
     const obj = localStorage.getItem("user");
     const name = JSON.parse(obj);
+    // const name = "Rwishav GHOSH";
     document.getElementById("name").innerHTML=name;
     console.log(name);
 </script>
