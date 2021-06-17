@@ -1,43 +1,40 @@
 ///// User Authentication /////
 
+// const auth = firebase.auth();
 
-const auth = firebase.auth();
-
-const whenSignedIn = document.getElementById('whenSignedIn');
-const whenSignedOut = document.getElementById('whenSignedOut');
-
-const signInBtn = document.getElementById('signInBtn');
-const signOutBtn = document.getElementById('signOutBtn');
-
-const userDetails = document.getElementById('userDetails');
-
-const provider = new firebase.auth.GoogleAuthProvider();
+// const signInBtn = document.getElementById('signInBtn');
+// const signOutBtn = document.getElementById('signOutBtn');
+// const provider = new firebase.auth.GoogleAuthProvider();
 
 /// Sign in event handlers
+// function signIn(){
+//      auth.signInWithPopup(provider);
+// }
 
-signInBtn.onclick = () => auth.signInWithPopup(provider);
+// function LogOut(){
+//     auth.signOut();
+//     location.href = './index.html';
+// }
 
-signOutBtn.onclick = () => {
-    auth.signOut();
-    location.href = './index.html';
-}
+// auth.onAuthStateChanged(user => {
 
-auth.onAuthStateChanged(user => {
-    if (user) {
-        // signed in
-        whenSignedIn.hidden = false;
-        whenSignedOut.hidden = true;
-        userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3>`;
-        //  <p>User ID: ${user.uid}</p>
-        location.href = './main.html';
-        // window.location.replace("./main.html");
-    } else {
-        // not signed in
-        whenSignedIn.hidden = true;
-        whenSignedOut.hidden = false;
-        userDetails.innerHTML = '';
-    }
-});
+//     const whenSignedIn = document.getElementById('whenSignedIn');
+//     const whenSignedOut = document.getElementById('whenSignedOut');
+//     const userDetails = document.getElementById('userDetails');
+
+//     if (user) {
+//         // signed in
+//         whenSignedIn.hidden = false;
+//         whenSignedOut.hidden = true;
+//         document.getElementById("userDetails").innerHTML = `<h3>Hello ${user.displayName}!</h3>`;
+//         location.href = './main.html';
+//     } else {
+//         // not signed in
+//         whenSignedIn.hidden = true;
+//         whenSignedOut.hidden = false;
+//         userDetails.innerHTML = '';
+//     }
+// });
 
 /*
 
@@ -97,4 +94,3 @@ auth.onAuthStateChanged(user => {
     }
 });
 */
-console.log(firebase);

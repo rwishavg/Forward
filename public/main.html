@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Noter</title>
+    <title>Forward</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -37,7 +37,7 @@
     </script>
 
     <link rel="stylesheet" href="main.css">
-    <script src="app.js" defer></script>
+   
 </head>
 
 <body>
@@ -50,11 +50,13 @@
                 <div class="dropdown-menu dropdown-menu-right">
                   <a class="dropdown-item" href="./history.html">History</a>
                   <a class="dropdown-item" href="./dev.html">Developers</a>
-                  <a class="dropdown-item"><button id="signOutBtn" class="dropdown-item">Log Out</button></a>
+                  <a class="dropdown-item"><button id="signOutBtn" class="dropdown-item" onclick="LogOut()">Log Out</button></a>
                 </div>
               </div>
         </div>
-            <div id="userDetails" style="display: flex; justify-content: center; font-size: x-large;"></div>
+        <div>
+            <div id="name"></div>
+        </div>
         <div>
             <button class="circle">
                 START
@@ -71,8 +73,13 @@
             <div class="animator_main">Hello</div>
         </div>
     </div>
-
-    <script src="main.js"></script>
 </body>
-
+<script>
+    const obj = localStorage.getItem("user");
+    const name = JSON.parse(obj);
+    document.getElementById("name").innerHTML=name;
+    console.log(name);
+</script>
+<script src="./main.js"></script>
+<script src="./auth_logOut.js"></script>
 </html>
