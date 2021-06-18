@@ -1,86 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="style.css">
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
                  https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-            var firebaseConfig = {
-                apiKey: "AIzaSyDX2t2QoMPUD38CngIjl0tRhec7y7tqglQ",
-                authDomain: "forward-455dc.firebaseapp.com",
-                projectId: "forward-455dc",
-                storageBucket: "forward-455dc.appspot.com",
-                messagingSenderId: "215850117573",
-                appId: "1:215850117573:web:74c2f032479900ab0303ac",
-                measurementId: "G-K4QH2PKGT7"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-        </script>
-        <script src="auth.js" defer></script>
-        <link rel="stylesheet" href="./hourglass.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDX2t2QoMPUD38CngIjl0tRhec7y7tqglQ",
+      authDomain: "forward-455dc.firebaseapp.com",
+      projectId: "forward-455dc",
+      storageBucket: "forward-455dc.appspot.com",
+      messagingSenderId: "215850117573",
+      appId: "1:215850117573:web:74c2f032479900ab0303ac",
+      measurementId: "G-K4QH2PKGT7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="auth.js" defer></script>
+  <link rel="stylesheet" href="./hourglass.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <img src="./assets/upper_red_design.svg" alt="">
+  <div class="wrapper">
+    <div class="header">
+      <img src="./assets/upper_red_design.svg" alt="">
+    </div>
+    <div class="userdetails">
+      <div id="whenSignedOut">
+        <div>
+          <h1
+            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex;justify-content: center;">
+            Login:
+          </h1>
         </div>
-        <div class="userdetails">
-            <div id="whenSignedOut">
-                <div>
-                    <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; display: flex;justify-content: center;">
-                        Login:
-                    </h1>
-                </div>
-                    <button  style=" display:flex; justify-content:center;" id="signInBtn" onclick="signIn()">
-                        <img style="height: 50px;width: 50px;" src="./assets/Google__G__Logo.svg" alt="">
-                    </button>
-            </div>
-            <div class="animation">
-                <div>
-                    <svg width="73px" height="88px" viewBox="0 0 73 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g id="hourglass">
-                        <path d="M63.8761664,86 C63.9491436,84.74063 64,83.4707791 64,82.1818182 C64,65.2090455 57.5148507,50.6237818 48.20041,44 C57.5148507,37.3762182 64,22.7909545 64,5.81818182 C64,4.52922091 63.9491436,3.25937 63.8761664,2 L10.1238336,2 C10.0508564,3.25937 10,4.52922091 10,5.81818182 C10,22.7909545 16.4851493,37.3762182 25.79959,44 C16.4851493,50.6237818 10,65.2090455 10,82.1818182 C10,83.4707791 10.0508564,84.74063 10.1238336,86 L63.8761664,86 Z" id="glass" fill="#ECF1F6"></path>
-                        <rect id="top-plate" fill="#4D4544" x="0" y="0" width="74" height="8" rx="2"></rect>
-                        <rect id="bottom-plate" fill="#4D4544" x="0" y="80" width="74" height="8" rx="2"></rect>
-                  
-                        <g id="top-sand" transform="translate(18, 21)">
-                          <clipPath id="top-clip-path" fill="white">
-                            <rect x="0" y="0" width="38" height="21"></rect>
-                          </clipPath>
-                  
-                          <path fill="#F5A623" clip-path="url(#top-clip-path)" d="M38,0 C36.218769,7.51704545 24.818769,21 19,21 C13.418769,21 1.9,7.63636364 0,0 L38,0 Z"></path>
-                        </g>
-                  
-                        <g id="bottom-sand" transform="translate(18, 55)">
-                          <clipPath id="bottom-clip-path" fill="white">
-                            <rect x="0" y="0" width="38" height="21"></rect>
-                          </clipPath>
-                  
-                          <g clip-path="url(#bottom-clip-path)">
-                            <path fill="#F5A623" d="M0,21 L38,21 C36.1,13.3636364 24.581231,0 19,0 C13.181231,0 1.781231,13.4829545 0,21 Z"></path>
-                          </g>
-                        </g>
-                      </g>
-                    </svg>
-                  </div>
-            </div>
+        <button style=" display:flex; justify-content:center;" id="signInBtn" onclick="signIn()">
+          <img style="height: 50px;width: 50px;" src="./assets/Google__G__Logo.svg" alt="">
+        </button>
+      </div>
+      <div class="animation">
+        <div>
+          <svg width="73px" height="88px" viewBox="0 0 73 88" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="hourglass">
+              <path
+                d="M63.8761664,86 C63.9491436,84.74063 64,83.4707791 64,82.1818182 C64,65.2090455 57.5148507,50.6237818 48.20041,44 C57.5148507,37.3762182 64,22.7909545 64,5.81818182 C64,4.52922091 63.9491436,3.25937 63.8761664,2 L10.1238336,2 C10.0508564,3.25937 10,4.52922091 10,5.81818182 C10,22.7909545 16.4851493,37.3762182 25.79959,44 C16.4851493,50.6237818 10,65.2090455 10,82.1818182 C10,83.4707791 10.0508564,84.74063 10.1238336,86 L63.8761664,86 Z"
+                id="glass" fill="#ECF1F6"></path>
+              <rect id="top-plate" fill="#4D4544" x="0" y="0" width="74" height="8" rx="2"></rect>
+              <rect id="bottom-plate" fill="#4D4544" x="0" y="80" width="74" height="8" rx="2"></rect>
+
+              <g id="top-sand" transform="translate(18, 21)">
+                <clipPath id="top-clip-path" fill="white">
+                  <rect x="0" y="0" width="38" height="21"></rect>
+                </clipPath>
+
+                <path fill="#F5A623" clip-path="url(#top-clip-path)"
+                  d="M38,0 C36.218769,7.51704545 24.818769,21 19,21 C13.418769,21 1.9,7.63636364 0,0 L38,0 Z"></path>
+              </g>
+
+              <g id="bottom-sand" transform="translate(18, 55)">
+                <clipPath id="bottom-clip-path" fill="white">
+                  <rect x="0" y="0" width="38" height="21"></rect>
+                </clipPath>
+
+                <g clip-path="url(#bottom-clip-path)">
+                  <path fill="#F5A623"
+                    d="M0,21 L38,21 C36.1,13.3636364 24.581231,0 19,0 C13.181231,0 1.781231,13.4829545 0,21 Z"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
         </div>
-            <div class="footer" >
-                <img src="./assets/lower_red_design.svg" alt="">
-            </div>
-    </div> 
+      </div>
+    </div>
+    <div class="footer">
+      <img src="./assets/lower_red_design.svg" alt="">
+    </div>
+  </div>
 </body>
+
 </html>
