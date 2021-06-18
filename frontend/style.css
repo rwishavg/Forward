@@ -16,7 +16,7 @@ body, html {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height:     auto;       
+    height:     auto;
     min-height: 100%;
     margin:     0px auto;
     padding:    0px auto;
@@ -61,7 +61,6 @@ body, html {
     justify-content: center;
     align-items: center;
 }
-
 
 .userdetails button {
     border-radius: 6px;
