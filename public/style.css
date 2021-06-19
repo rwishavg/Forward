@@ -10,6 +10,7 @@ body, html {
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 
 .wrapper {
@@ -53,14 +54,6 @@ body, html {
 .box:hover::before {
 	left: 100%;
 }
-
-/* .userdetails {
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
 
 .userdetails {
     margin-top: 5%;

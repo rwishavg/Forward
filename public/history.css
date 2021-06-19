@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body,html{
     height: 100%;
     padding: 0 auto;
@@ -5,33 +9,91 @@ body,html{
 }
 
 .wrapper{
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
     width: 100%;
 }
 
+.backarrow-class{
+    margin: 1%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#backarrow{
+    width: 40px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.selectoption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectoption label{
+    white-space: nowrap;
+    margin-right: 10px;
+    flex: 0.2;
+}
+
+.selectoption select{
+    flex: 0.6;
+}
+
+#month{
+    width: 90%;
+}
+
+.selectmenu{
+    padding: 20px;
+    flex: 0.5;
+    width: 100%;
+}
+
+.selectmenu div{
+    margin: 20px;
+}
+
+
 .graphbox{
-    margin-top: 10%;
-    height: 35%;
-    min-height: auto;
+    height: 400px;
     background-color: #FFF3F3;
-    padding: 5px;
-    margin: 25%;
-    border: 5px gray;
 }
 
-.totaltime{
-    margin: 5% 5% 5% 5%;
-    padding: 3%;
-    min-width: auto;
-    min-height: 15px;
-    background-color: #FFE5D6;
-    border: 2px;
+.box-display{
+    padding: 20px;
+    flex: 0.5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
 }
 
-.avgtime{
-    min-width: auto;
-    background-color: #FFE5D6;
-    margin: 5% 5% 5% 5%;
-    padding: 3%;
-    min-height: 20px;
+.box-display div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40%;
+    margin: 10px;
+    width: 100%;
+}
+
+@media (max-width: 680px){
+    .container{
+        flex-direction: column;
+    }
 }

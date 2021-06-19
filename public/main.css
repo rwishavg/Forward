@@ -24,9 +24,9 @@ body, html {
     height: 175px;
     width: 175px;
     border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex;
+    align-items: center; */
+    /* justify-content: center; */
     user-select: none;
     font-size: x-large;
     border: none;
@@ -38,7 +38,7 @@ body, html {
 }
 
 .circle:active{
-    transform: scale(0.95);
+    transform: scale(0.97);
 }
 
 .timeshowerbox{
@@ -78,19 +78,20 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    
     width: 100%;
-
+    
+    /* flex: 1; */
 }
 
-.animation-container{
-    flex: 0.5;
+/* .animation-container{
     position: relative;
-}
+    
+    flex: 0.5;
+} */
 
 .animator_main{
-    font-size: x-large;
+    /* font-size: x-large; */
+    position: relative;
     border: 5px black;
     background-image: linear-gradient(#B9DEE2,#F5F5F5);
     display: flex;
@@ -99,9 +100,7 @@ body, html {
     margin: 5%;
     height: 400px;
     width: 80%;
-    position: relative;
 }
-
 
 .dropdown{
     float:right;
@@ -109,23 +108,20 @@ body, html {
     padding: 5px;
     border: none;
     user-select: none;
-
 }
-
 
 .dropdown-item{
     background-color: #ffffff;
-    margin: 8px auto;
+    margin: 10px auto;
     padding: .25rem 0.8rem;
     border-radius: 5px;
-    width: 80%;
-    display: flex;
+    width: 85%;
+    /* display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-start; */
 }
 
-
-.t{
+.button{
     background: transparent;
     border: none;
     user-select: none;
@@ -133,8 +129,7 @@ body, html {
     border-radius: 20%;
 }
 
-
-.t:focus{
+.button:focus{
     outline: none;
 }
 
@@ -143,11 +138,9 @@ body, html {
     position: relative;
 }
 
-
-.color{
+/* .color{
     color: grey !important;
-}
-
+} */
 
 #backarrow{
     display: none;
@@ -169,28 +162,25 @@ body, html {
 
 
 /* additional media query to be added later */
-@media (max-width: 1050px)
-{
-.display{
-    flex-direction: column;
-}
-
-.start-and-timer, .animation-container{
-    width: 100%;
-}
-
-.start-and-timer{
-   flex-direction: column;
-   padding: 5px;
-}
-
-.div-left-circle, .div-right-timer{
-   margin: 10px auto;
-   justify-content: center;
-}
-}
-
 @media (max-width: 680px){
+    .display{
+        flex-direction: column;
+    }
+    
+    .start-and-timer, .animation-container{
+        width: 100%;
+    }
+    
+    .start-and-timer{
+        flex-direction: column;
+       padding: 5px;
+    }
+    
+    .div-left-circle, .div-right-timer{
+        margin: 10px auto;
+        justify-content: center;
+    }
+    
     .timeshowerbox{
         padding: 20px;
     }
@@ -199,3 +189,25 @@ body, html {
         height: 250px;
     }
 }
+
+
+    /* @media (max-width: 1050px)
+    {
+        .display{
+            flex-direction: column;
+        }
+        
+        .start-and-timer, .animation-container{
+            width: 100%;
+        }
+        
+        .start-and-timer{
+            flex-direction: column;
+            padding: 5px;
+        }
+        
+        .div-left-circle, .div-right-timer{
+            margin: 10px auto;
+            justify-content: center;
+        }
+    } */
