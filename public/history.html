@@ -13,40 +13,47 @@
     <div class="wrapper">
         <div class="backarrow-class">
             <a href="./main.html">
-                <img src="./assets/backward_arrow.svg" alt="">
+                <img src="./assets/backward_arrow.svg" alt="" id="backarrow">
             </a>
         </div>
 
-        <label for="Month">Choose Month:</label>
-        <select name="cars" id="cars">
-            <option value="none">None</option>
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-        </select>
+        <div class="container">
+            <div class="selectmenu">
+                <div class="selectoption">
+                    <label for="Month">Choose Month:</label>
+                    <select name="month" id="month">
+                        <option value="none">- None -</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
 
-        <div class="box-display">
-            <div class="graphbox">
-                Graph
+                <div class="graphbox">
+                    Graph
+                </div>
             </div>
-
-            <div class="totaltime">
-                Total Time :
-            </div>
-
-            <div class="avgtime">
-                Average Time :
+            
+            <div class="box-display">
+                <div class="totaltime">
+                    Total Time :
+                </div>
+    
+                <div class="avgtime">
+                    Average Time :
+                </div>
             </div>
         </div>
+
     </div>
 </body>
 
