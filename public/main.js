@@ -39,7 +39,6 @@ backarrow.addEventListener("click", () => {
 }
 )
 
-
 let hr = 0, min = 0, sec = 0
 
 // const setAnimator = (count) => {

@@ -9,29 +9,23 @@ body,html{
     width: 100%;
 }
 
+.backarrow-class{
+    margin: 2%;
+    float: right;
+}
+
+/* .box-display{
+
+}
+
 .graphbox{
-    margin-top: 10%;
-    height: 35%;
-    min-height: auto;
-    background-color: #FFF3F3;
-    padding: 5px;
-    margin: 25%;
-    border: 5px gray;
+
 }
 
 .totaltime{
-    margin: 5% 5% 5% 5%;
-    padding: 3%;
-    min-width: auto;
-    min-height: 15px;
-    background-color: #FFE5D6;
-    border: 2px;
+
 }
 
 .avgtime{
-    min-width: auto;
-    background-color: #FFE5D6;
-    margin: 5% 5% 5% 5%;
-    padding: 3%;
-    min-height: 20px;
-}
+
+} */
