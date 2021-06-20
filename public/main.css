@@ -189,7 +189,7 @@ body, html {
     
     .start-and-timer{
         flex-direction: column;
-       padding: 5px;
+        padding: 5px;
     }
     
     .div-left-circle, .div-right-timer{
@@ -202,6 +202,8 @@ body, html {
     }
     
     .animator_main{
-        height: 250px;
+        height: 300px;
+        width: 300px;
+        margin-left: 40px;
     }
 }
