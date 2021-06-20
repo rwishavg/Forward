@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link rel="stylesheet" href="style.css">
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
   <!-- TODO: Add SDKs for Firebase products that you want to use
@@ -29,16 +28,16 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
-  <script src="../scripts/auth.js" defer></script>
-  <link rel="stylesheet" href="../styles/hourglass.css">
-  <link rel="stylesheet" href="../styles/style.css">
+  <script src="./scripts/auth.js" defer></script>
+  <link rel="stylesheet" href="./styles/hourglass.css">
+  <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
 <body>
   <div class="wrapper">
     <div class="header">
-      <img src="../assets/upper_red_design.svg" alt="">
+      <img src="./assets/upper_red_design.svg" alt="">
     </div>
     <div class="userdetails">
       <div id="whenSignedOut">
@@ -49,7 +48,7 @@
           </h1>
         </div>
         <button style=" display:flex; justify-content:center;" id="signInBtn" onclick="signIn()">
-          <img style="height: 50px;width: 50px;" src="../assets/Google__G__Logo.svg" alt="">
+          <img style="height: 50px;width: 50px;" src="./assets/Google__G__Logo.svg" alt="">
         </button>
       </div>
       <div class="animation">
@@ -88,9 +87,8 @@
       </div>
     </div>
     <div class="footer">
-      <img src="../assets/lower_red_design.svg" alt="">
+      <img src="./assets/lower_red_design.svg" alt="">
     </div>
   </div>
 </body>
-
 </html>
