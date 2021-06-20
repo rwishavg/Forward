@@ -24,7 +24,7 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: hsl(177, 81%, 86%);
+    background: hsl(0, 0%, 100%);
 }
 
 .profile_card_large{
