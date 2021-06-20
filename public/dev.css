@@ -37,7 +37,7 @@ body{
     min-height:80vh;
 }
 
-.links{
+.links div, .links{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,6 +46,7 @@ body{
 }
 
 .links .svg_img{
+    position: relative;
     width: 80%;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     margin: 8px 20px;
@@ -70,11 +71,17 @@ body{
     position: absolute;
     border-radius:8px;
     bottom: 0;
-    transform: translateY(-10%);
+    transform: translateY(-110%);
+}
+
+.arrow{
+    position: absolute;
+    bottom: -10px;
+    z-index: 10;
 }
 
 .links:hover .svg_img{
-    position: relative;
+    /* position: relative; */
     transform: translateY(-35%);
 }
 
@@ -103,7 +110,19 @@ body{
 @media (max-width:1080px) {
     .profile_card_large{
         grid-template-columns: repeat(1,1fr);
+    }
 
+    .link_card{
+        position: static;
+        transform: translateY(0);
+    }
+
+    .links:hover .svg_img{
+        transform: translateY(0%);
+    }
+
+    .arrow{
+        display: none;
     }
 }
 
@@ -123,10 +142,6 @@ body{
     
     .links .svg_img{
         z-index: 0;
-    }
-    
-    .links:hover .svg_img{
-        transform: translateY(0%);
     }
     
     .link_card{
