@@ -1,6 +1,7 @@
-body{
+body, html{
     background: #ddd;
 }
+
 .profile-area{
     padding: 80px 0;
 }

@@ -24,9 +24,6 @@ body, html {
     height: 175px;
     width: 175px;
     border-radius: 100%;
-    /* display: flex;
-    align-items: center; */
-    /* justify-content: center; */
     user-select: none;
     font-size: x-large;
     border: none;
@@ -79,27 +76,18 @@ body, html {
     align-items: center;
     justify-content: center;
     width: 100%;
-    
-    /* flex: 1; */
 }
 
-/* .animation-container{
-    position: relative;
-    
-    flex: 0.5;
-} */
-
 .animator_main{
-    /* font-size: x-large; */
     position: relative;
-    border: 5px black;
-    background-image: linear-gradient(#B9DEE2,#F5F5F5);
+    /* border: 5px black; */
+    /* background-image: linear-gradient(#B9DEE2,#F5F5F5); */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    margin: 5%;
+    margin: 2%;
     height: 400px;
-    width: 80%;
+    width: 50%;
 }
 
 .dropdown{
@@ -116,9 +104,6 @@ body, html {
     padding: .25rem 0.8rem;
     border-radius: 5px;
     width: 85%;
-    /* display: flex;
-    align-items: center;
-    justify-content: flex-start; */
 }
 
 .button{
@@ -138,10 +123,6 @@ body, html {
     position: relative;
 }
 
-/* .color{
-    color: grey !important;
-} */
-
 #backarrow{
     display: none;
 }
@@ -156,10 +137,45 @@ body, html {
 }
 
 .image-animator{
-    height: 130%;
-    width: 130%;
+    height: 50%;
+    width: 50%;
 }
 
+#right-wheel, #left-wheel{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#man-bike{
+    transform-origin: bottom;
+}
+
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes bike{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+
+@keyframes hat{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
 
 /* additional media query to be added later */
 @media (max-width: 680px){
@@ -189,25 +205,3 @@ body, html {
         height: 250px;
     }
 }
-
-
-    /* @media (max-width: 1050px)
-    {
-        .display{
-            flex-direction: column;
-        }
-        
-        .start-and-timer, .animation-container{
-            width: 100%;
-        }
-        
-        .start-and-timer{
-            flex-direction: column;
-            padding: 5px;
-        }
-        
-        .div-left-circle, .div-right-timer{
-            margin: 10px auto;
-            justify-content: center;
-        }
-    } */
