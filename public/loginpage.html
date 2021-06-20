@@ -29,14 +29,16 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
   </script>
-  <script src="auth.js" defer></script>
-  <link rel="stylesheet" href="./hourglass.css">
+  <script src="../scripts/auth.js" defer></script>
+  <link rel="stylesheet" href="../styles/hourglass.css">
+  <link rel="stylesheet" href="../styles/style.css">
+
 </head>
 
 <body>
   <div class="wrapper">
     <div class="header">
-      <img src="./assets/upper_red_design.svg" alt="">
+      <img src="../assets/upper_red_design.svg" alt="">
     </div>
     <div class="userdetails">
       <div id="whenSignedOut">
@@ -47,7 +49,7 @@
           </h1>
         </div>
         <button style=" display:flex; justify-content:center;" id="signInBtn" onclick="signIn()">
-          <img style="height: 50px;width: 50px;" src="./assets/Google__G__Logo.svg" alt="">
+          <img style="height: 50px;width: 50px;" src="../assets/Google__G__Logo.svg" alt="">
         </button>
       </div>
       <div class="animation">
@@ -86,7 +88,7 @@
       </div>
     </div>
     <div class="footer">
-      <img src="./assets/lower_red_design.svg" alt="">
+      <img src="../assets/lower_red_design.svg" alt="">
     </div>
   </div>
 </body>
