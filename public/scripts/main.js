@@ -9,7 +9,26 @@ const right_wheel = document.getElementById("right-wheel")
 const left_wheel = document.getElementById("left-wheel")
 const hat = document.getElementById("hat")
 const man_bike = document.getElementById("man-bike")
-// localStorage.setItem("time",JSON.stringify(0));
+
+//Initialising Local Storage:
+if(localStorage.hasOwnProperty('time')===false)
+{
+    localStorage.setItem("time",JSON.stringify(0));
+}
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+console.log(dd);
+
+if(localStorage.hasOwnProperty('date')===false)
+{
+    localStorage.setItem("date",dd);
+}
+if (localStorage.getItem("date")!=dd)
+{
+    localStorage.setItem("date",dd);
+    localStorage.setItem("time",JSON.stringify(0));
+}
 
 const style = {
     right_wheel_style: "wheel 2.5s infinite linear",
@@ -39,11 +58,22 @@ circle.addEventListener("click", () => {
         changestyle("black","50%","linear-gradient(180deg, #effff4 0%, rgba(255, 255, 255, 0) 100%),linear-gradient(180deg, rgba(255, 255, 255, 0) 63.69%, #d1e2e9 99.99%)","START");
         animation_on_start(style_on_stop.right_wheel_style,style_on_stop.left_wheel_style,style_on_stop.hat_style,style_on_stop.man_bike_style)
         clearInterval(interval)
-        localStorage.setItem("time",JSON.stringify(timer));
+        if (localStorage.getItem("date")!=dd)
+        {
+            localStorage.setItem("date",dd);
+            localStorage.setItem("time",JSON.stringify(0));
+        }
+        else
+            localStorage.setItem("time",JSON.stringify(timer));
     }
     else {
         // START 
         askedToStop = false;
+        if (localStorage.getItem("date")!=dd)
+        {
+            localStorage.setItem("date",dd);
+            localStorage.setItem("time",JSON.stringify(0));
+        }
         changestyle("black","15px","linear-gradient(180deg, #fbfdf9 0%, rgba(247, 214, 214, 0.918) 100%),linear-gradient(180deg, rgba(153, 95, 95, 0) 63.69%, #d5daf8 99.99%)","STOP");
         setTime()
         animation_on_start(style.right_wheel_style,style.left_wheel_style,style.hat_style,style.man_bike_style)
