@@ -9,7 +9,21 @@ const right_wheel = document.getElementById("right-wheel")
 const left_wheel = document.getElementById("left-wheel")
 const hat = document.getElementById("hat")
 const man_bike = document.getElementById("man-bike")
-// localStorage.setItem("time",JSON.stringify(0));
+
+//Initialising Local Storage:
+if(localStorage.hasOwnProperty('time')===false)
+{
+    localStorage.setItem("time",JSON.stringify(0));
+}
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+console.log(dd);
+
+if(localStorage.hasOwnProperty('date')===false)
+{
+    localStorage.setItem("date",dd);
+}
 
 const style = {
     right_wheel_style: "wheel 2.5s infinite linear",
