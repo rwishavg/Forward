@@ -9,6 +9,7 @@ const right_wheel = document.getElementById("right-wheel")
 const left_wheel = document.getElementById("left-wheel")
 const hat = document.getElementById("hat")
 const man_bike = document.getElementById("man-bike")
+// localStorage.setItem("time",JSON.stringify(0));
 
 const style = {
     right_wheel_style: "wheel 2.5s infinite linear",
@@ -69,8 +70,8 @@ const setTime = () => {
         if(askedToStop===true)
             clearInterval(interval);
         timer = parseInt((Date.now() - curr)/1000);
-        var old_time = localStorage.getItem("time");
-        timer = timer + parseInt(old_time);
+        var old_time = parseInt(localStorage.getItem("time"));
+        timer = timer + old_time;
         sec=parseInt(timer%60);
         hr = parseInt(timer / 3600);
         min = parseInt(timer / 60);

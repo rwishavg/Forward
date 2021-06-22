@@ -284,8 +284,9 @@
 
 <script>
     const obj = localStorage.getItem("user");
-    const name = JSON.parse(obj);
-    // const name = "Rwishav GHOSH";
+    let name = JSON.parse(obj);
+    // let name = "Rwishav Ghosh";
+    name = name.split(" ")[0]
     document.getElementById("name").innerHTML = name;
     // console.log(name);
 </script>
