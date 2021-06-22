@@ -1,17 +1,5 @@
 ///// Firestore /////
 
-// const circle = document.querySelector(".circle")
-
-// circle.addEventListener("click", () => {
-//     if(circle.innerHTML==="STOP"){
-//         // STOP
-        
-//     }
-//     else {
-//         // START 
-        
-//     }
-// })
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 const object = localStorage.getItem("user");
@@ -25,7 +13,7 @@ const thingsList = document.getElementById('thingsList');
 let thingsRef;
 let unsubscribe;
 
-
+const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
 
     if (user) {
@@ -34,15 +22,18 @@ auth.onAuthStateChanged(user => {
         thingsRef = db.collection(u_name)
 
         createThing.onclick = () => {
-
-            const { serverTimestamp } = firebase.firestore.FieldValue;
-
-            thingsRef.add({
-                name: u_name,
-                date: dd,
-                time: parseInt(localStorage.getItem("time")),
-                createdAt: serverTimestamp()
-            });
+            if (localStorage.getItem("date")!=dd)
+            {
+                localStorage.setItem("date",dd);
+                const { serverTimestamp } = firebase.firestore.FieldValue;
+                thingsRef.add({
+                    name: u_name,
+                    date: dd,
+                    time: parseInt(localStorage.getItem("time")),
+                    createdAt: serverTimestamp()
+                });
+                localStorage.setItem("time",JSON.stringify(0));
+            }
         }
         // Query
         unsubscribe = thingsRef

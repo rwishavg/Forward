@@ -1,4 +1,4 @@
-const auth = firebase.auth();
+// const auth = firebase.auth();
 const provider = new firebase.auth.GoogleAuthProvider();
 function LogOut(){
     auth.signOut();
