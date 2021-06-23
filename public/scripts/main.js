@@ -107,4 +107,4 @@ const animation_on_start = (right_wheel_style,left_wheel_style,hat_style,man_bik
     man_bike.style.animation = man_bike_style
 }
 
-document.getElementById("time_box").innerHTML = localStorage.getItem("time");
+// document.getElementById("time_box").innerHTML = localStorage.getItem("time");
