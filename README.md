@@ -6,7 +6,7 @@
 <br />
 <p align="center">
   <a href="https://forward-455dc.web.app/index.html">
-    <img align="center" src="../images/logo.png" alt="Logo" width="100" height="100">
+    <img align="center" src="./images/logo.png" alt="Logo" width="100" height="100">
     <h2 align="center">Forward</h2>
     <h3 align="center">A productivity App</h3>
     <h3 align="center">----------------------------------------</h3>
@@ -49,11 +49,11 @@ To try out the web-app simply follow the link : https://forward-455dc.web.app/in
 5. Easy to use. Deployed over the WEB. Accesible on mobile devices.
 
 ### What it Looks Like
-![1](../images/index.png)
+![1](./images/index.png)
 
-![2](../images/timer.png)
+![2](./images/timer.png)
 
-![3](../images/graph.png)
+![3](./images/graph.png)
 
 <!-- LICENSE -->
 ## License
