@@ -6,10 +6,10 @@
 <br />
 <p align="center">
   <a href="https://forward-455dc.web.app/index.html">
-    <img align="center" src="./images/logo.png" alt="Logo" width="100" height="100">
+    <img align="center" src="./images/logo.png" alt="Logo" width="120" height="90">
     <h2 align="center">Forward</h2>
     <h3 align="center">A productivity App</h3>
-    <h3 align="center">----------------------------------------</h3>
+    <h3 align="center">--------------------------</h3>
   </a>
   <p align="center">
     <a href="https://github.com/rwishavg/COVID-19-and-India/issues">Report Bug</a>
@@ -64,5 +64,6 @@ Distributed under the MIT License. See [LICENSE](https://github.com/rwishavg/For
 <!-- CONTACT -->
 ## Contributors
 
-[Rwishav Ghosh](https://rwishavg.github.io/portfolio/) - Portfolio
-[Samyak Mehta](https://github.com/1107-itssamyak) - Github
+[Rwishav Ghosh](https://rwishavg.github.io/portfolio/) 
+
+[Samyak Mehta](https://github.com/1107-itssamyak)
