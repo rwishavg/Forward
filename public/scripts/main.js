@@ -89,6 +89,7 @@ const setTime = () => {
         sec=parseInt(timer%60);
         hr = parseInt(timer / 3600);
         min = parseInt(timer / 60);
+        min = min%60;
         if(sec<10 && min<10)
             document.querySelector(".timeshowerbox").innerHTML = `0${hr}:0${min}:0${sec}`
         else if(sec<10 && min>9)

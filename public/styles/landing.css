@@ -4,12 +4,22 @@ body, html {
     padding: 0px auto;
 }
 
-.arrow{
+.sign_up{
+    margin: 0;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.landing_text{
     margin: 0;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 65%;
     transform: translateX(-50%);
+    transform: translateY(-50%);
     overflow: hidden;
 }
 
@@ -23,18 +33,15 @@ body, html {
     padding:    0px auto;
 }
 
-.header{
-    margin-top: 0%;
-    top: 0%;
-}
-
-.footer{
-    display: flex;
-    margin: 0px auto;
-    padding: 0px auto;
+.landing_image
+{
+    margin: 0;
     position: absolute;
-    bottom: 0%;
-    right: 0px; 
+    top: 15%;
+    left: 25%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 50%;
 }
 
 .box:hover {
@@ -53,31 +60,6 @@ body, html {
 
 .box:hover::before {
 	left: 100%;
-}
-
-.userdetails {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.userdetails button {
-    border-radius: 6px;
-    margin-top: 20%;
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    color: white;
-}
-
-.userdetails button:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-
-.animation{
-    margin-top: 8%;
 }
 
 @media (max-width: 680px)
