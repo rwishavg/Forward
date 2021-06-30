@@ -64,3 +64,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/rwishavg/For
 [Rwishav Ghosh](https://rwishavg.github.io/portfolio/) 
 
 [Samyak Mehta](https://github.com/1107-itssamyak)
+
+[Stoycho Kostov](https://github.com/kostovsk)
