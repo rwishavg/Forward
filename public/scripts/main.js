@@ -108,19 +108,4 @@ const animation_on_start = (right_wheel_style,left_wheel_style,hat_style,man_bik
     man_bike.style.animation = man_bike_style
 }
 
-document.getElementById("time_box").innerHTML = parseTime(localStorage.getItem("time"));
-
-function parseTime(time) {
-    sec = parseInt(time%60);
-    hr = parseInt(time/3600);
-    min = parseInt(time/60);
-    min = min%60;
-    if (sec<10 && min<10)
-        return `0${hr}:0${min}:0${sec}`;
-    else if (sec<10 && min>9)
-        return `0${hr}:${min}:0${sec}`;
-    else if (sec>9 && min<10)
-        return `0${hr}:0${min}:${sec}`;
-    else
-        return `0${hr}:${min}:${sec}`;
-}
+// document.getElementById("time_box").innerHTML = localStorage.getItem("time");
