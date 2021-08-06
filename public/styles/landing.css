@@ -40,8 +40,8 @@ body, html {
     top: 15%;
     left: 25%;
     transform: translateX(-50%);
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
 }
 
 .box:hover {
@@ -62,9 +62,38 @@ body, html {
 	left: 100%;
 }
 
-@media (max-width: 680px)
+@media only screen and (max-width: 680px)
 {
+    body{
+        max-width: 650px;
+    }
     .animation{
         margin-top: 40%;
     }
+
+    .landing_image::after{
+        clear: both;
+        display: table;
+    }
+
+    .landing_image,
+    {
+        margin-left: 2%;
+   
+    }
+
+      .landing_text
+    {
+        margin-right: 2%;
+        height: 45%;
+        width: 45%;
+    }
+
+   .sign_up{
+        margin-top: 2%;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+   }
+
 }

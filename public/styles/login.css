@@ -50,6 +50,34 @@ body, html {
     height: 40px;
 }
 
-@media (max-width: 680px)
-{
+@media only screen and (max-width: 680px) {
+   .body{
+     margin-right: auto;
+     margin-left: auto;
+   }
+
+  .sign_in{
+      max-width:400px;
+      font-size: x-small;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 20px;
+      margin-bottom: 10px;
+  }
+
+  .logo{
+      max-height:20px;
+  }
+
+  .login{
+      font-size: x-small;
+  }
+
+  .footer{
+    margin-left: 50%;
+  }
+
+  .sign_in::after{
+      clear: both;
+  }
 }
