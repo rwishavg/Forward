@@ -1,0 +1,206 @@
+/* @import url("http://fonts.cdnfonts.com/css/octarine"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, octarine, sans-serif;
+  font-weight: 600;
+}
+
+body {
+  display: flex;
+  max-height: 100vh;
+}
+
+.left_container {
+  background: #ffffff;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right_container {
+  background: rgb(194, 235, 233);
+  height: 100vh;
+  border-radius: 20px 0 0 20px;
+  position: absolute;
+  width: 40%;
+  right: 0;
+  z-index: 5;
+  padding: 2% 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.upper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0.5;
+  /* padding: 10px; */
+  width: 100%;
+}
+
+.upper label {
+  display: block;
+  width: 40%;
+  margin-bottom: 15px;
+}
+
+.upper input {
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid gray;
+}
+
+.upper a {
+  width: 100%;
+  text-align: right;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  margin-top: -30px;
+}
+
+.upper a:hover{
+  text-decoration: underline;
+}
+
+.sign_in {
+  flex: 0.2;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.lower {
+  flex: 0.3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.lower button {
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 3px gray;
+  cursor: pointer;
+}
+
+.lower button:active {
+  transform: scale(0.98);
+}
+
+.lower button:first-child {
+  background: #aed9dd;
+}
+
+.lower > div {
+  text-align: center;
+}
+
+.lower button:last-child {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 15px;
+}
+
+.google {
+  flex: 0.2;
+}
+
+.google img {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.slogan {
+  flex: 0.2;
+  display: grid;
+  place-items: center;
+  width: 80%;
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+.slogan > span {
+  width: 50%;
+  text-align: center;
+  font-family: octarine;
+  font-weight: 700;
+}
+
+.bottom {
+  flex: 0.6;
+  z-index: 2;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+#flower {
+  width: 500px;
+  margin: auto;
+}
+
+
+@media (max-width: 1050px) {
+
+  #flower {
+    width: 46vw;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    flex-direction: column;
+    overflow-y: scroll;
+    font-size: 1.2rem;
+  }
+
+  .left_container {
+    display: none;
+  }
+
+  .right_container {
+    width: 100vw;
+  }
+  .sign_in {
+    font-size: 2.5rem;
+  }
+
+  .upper {
+    margin-top: 50px;
+    justify-content: space-around;
+    flex: 0.4;
+  }
+
+  .upper a{
+    margin-top: 0px;
+  }
+
+  .lower{
+    flex: 0.22;
+  }
+}

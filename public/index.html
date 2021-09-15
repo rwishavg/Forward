@@ -1,51 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time</title>
-    <link rel="stylesheet" href="./styles/landing.css">
 
-     <!-- The core Firebase JS SDK is always required and must be listed first -->
-     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>  
-     <!-- TODO: Add SDKs for Firebase products that you want to use
-              https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
-     <script>
-         // Your web app's Firebase configuration
-         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-         var firebaseConfig = {
-             apiKey: "AIzaSyDX2t2QoMPUD38CngIjl0tRhec7y7tqglQ",
-             authDomain: "forward-455dc.firebaseapp.com",
-             projectId: "forward-455dc",
-             storageBucket: "forward-455dc.appspot.com",
-             messagingSenderId: "215850117573",
-             appId: "1:215850117573:web:74c2f032479900ab0303ac",
-             measurementId: "G-K4QH2PKGT7"
-         };
-         // Initialize Firebase
-         firebase.initializeApp(firebaseConfig);
-         firebase.analytics();
-     </script>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Forward</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="./styles/index.css" />
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+                  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDX2t2QoMPUD38CngIjl0tRhec7y7tqglQ",
+      authDomain: "forward-455dc.firebaseapp.com",
+      projectId: "forward-455dc",
+      storageBucket: "forward-455dc.appspot.com",
+      messagingSenderId: "215850117573",
+      appId: "1:215850117573:web:74c2f032479900ab0303ac",
+      measurementId: "G-K4QH2PKGT7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
+  <script src="./scripts/auth.js" defer></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <img src="./assets2/undraw_time_management_30iu.svg" class="landing_image" alt="">
-        </div>
-        <a href="./loginpage.html">
-            <div class="sign_up box">
-                <img class="button" src="./assets2/getStarted.svg" alt="">
-            </div>
-        </a>
-        <div>
-            <img src="./assets2/Landing_text.svg" class="landing_text" alt="">
-        </div>
-    </div>
+	<div class="left_container">
+		<div class="slogan">
+			<span> A Better Way </span>
+      <span>To Manage your Day</span>
+		</div>
+		<div class="bottom">
+			<img id="flower" src="./assets2/undraw_time_management_30iu.svg" alt="flower_image" />
+		</div>
+	</div>
+	<div class="right_container">
+		<div class="wrapper" id="whenSignedOut">
+			<div class="upper">
+				<div class="sign_in">Sign In</div>
+
+				<div>
+					<label for="email">Email</label>
+					<input type="email" placeholder="Email" name="email" />
+				</div>
+				<div>
+					<label for="pass">Password</label>
+					<input type="password" placeholder="Password" name="pass" />
+				</div>
+				<a href="#">Forgot Password?</a>
+			</div>
+
+			<div class="lower">
+				<button>Sign In</button>
+				<div>or</div>
+				<button onclick="signIn()" id="signInBtn" class="sign_in">
+					<i class="google">
+						<img src="./assets/Google__G__Logo.svg" alt="google_tag" />
+					</i>
+					<span>Sign in With Google</span>
+				</button>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
