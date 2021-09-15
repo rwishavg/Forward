@@ -50,30 +50,20 @@ body, html {
     height: 40px;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 729px) {
    .body{
      margin-right: auto;
      margin-left: auto;
    }
+   #whenSignedOut{
+       margin-top: 35%;
+   }
 
-  .sign_in{
-      max-width:400px;
-      font-size: x-small;
-      padding-left: 10px;
-      padding-right: 10px;
-      height: 20px;
-      margin-bottom: 10px;
-  }
-
-  .logo{
-      max-height:20px;
-  }
-
-  .login{
-      font-size: x-small;
-  }
-
+   .sign_in{
+       font-size: large;
+   }
   .footer{
+    margin-top: 80%;
     margin-left: 50%;
   }
 
