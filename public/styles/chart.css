@@ -59,15 +59,20 @@ html {
   font-size: var(--f-size);
 }
 .chart {
+  padding: 3%;
   display: flex;
   justify-content: center;
   min-height: 400px;
-  max-height: 500px;
+  /* max-height: 500px; */
   height: fit-content;
   width: var(--common-width);
   border-radius: 10px;
   box-shadow: var(--shadow);
   background-color: white;
+}
+
+#myChart{
+  height: 200px;
 }
 .time {
   justify-content: space-between;

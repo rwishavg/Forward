@@ -45,7 +45,19 @@ const promise1 = new Promise((resolve,reject)=>{
     },
 
     // Configuration options go here
-    options: {}
+        options: {
+            plugins: {
+                legend: {
+                    labels: {
+                        // This more specific font property overrides the global property
+                        font: {
+                            size: 30,
+                            weight : "boldness"
+                        }
+                    }
+                }
+            }
+    }
     });
 
     let sum = 0;
