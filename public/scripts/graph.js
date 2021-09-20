@@ -65,9 +65,9 @@ const promise1 = new Promise((resolve,reject)=>{
     sum+=hr;
     console.log(hr,sum);    
     })
-    sum.toFixed(2);
+    sum = sum.toFixed(2);
     document.getElementById("total_time").innerHTML = sum;
     let avg = sum/(dateArray.length);
-    avg.toFixed(2)
+    avg = avg.toFixed(2);
     document.getElementById("avg_time").innerHTML = avg;
 })
