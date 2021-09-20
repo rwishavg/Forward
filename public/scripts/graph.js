@@ -5,8 +5,6 @@ async function getData(resolve){
     const db = firebase.firestore();
     const object = localStorage.getItem("user");
     let u_name = JSON.parse(object);
-    
-    
 
     await db.collection(u_name).orderBy("createdAt", "asc").onSnapshot((snapshot) => {
         snapshot.docs.forEach(doc => {
@@ -20,6 +18,10 @@ async function getData(resolve){
         });
         resolve("success");
     });
+}
+if (dateArray.length > 15) {
+    hoursArray = hoursArray.slice(hoursArray.length - 15, hoursArray.length);
+    dateArray = dateArray.slice(dateArray.length - 15, dateArray.length);
 }
 
 const promise1 = new Promise((resolve,reject)=>{
