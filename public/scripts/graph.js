@@ -6,7 +6,9 @@ async function getData(resolve){
     const object = localStorage.getItem("user");
     let u_name = JSON.parse(object);
     
-    await db.collection(u_name).get().then((snapshot) => {
+    
+
+    await db.collection(u_name).orderBy("createdAt", "asc").onSnapshot((snapshot) => {
         snapshot.docs.forEach(doc => {
             var item = doc.data();
     
